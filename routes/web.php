@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\EventoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -97,6 +98,15 @@ Route::get('/users/{id}', [UserController::class, 'show'])->name('users.show');
 Route::get('/users/{id}/edit', [UserController::class, 'edit'])->name('users.edit');
 Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update');
 Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
+
+// EVENTO
+Route::get('/eventos', [EventoController::class, 'index'])->name('eventos.index');
+Route::get('/eventos/create', [EventoController::class, 'create'])->name('eventos.create');
+Route::post('/eventos', [EventoController::class, 'store'])->name('eventos.store');
+Route::get('/eventos/{id}/edit', [EventoController::class, 'edit'])->name('eventos.edit');
+Route::put('/eventos/{id}', [EventoController::class, 'update'])->name('eventos.update');
+Route::delete('/eventos/{id}', [EventoController::class, 'destroy'])->name('eventos.destroy');
+
 
 
 
