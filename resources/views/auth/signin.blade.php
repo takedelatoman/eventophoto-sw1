@@ -40,7 +40,7 @@
                                         <div class="mb-3">
                                             <input type="email" id="email" name="email" class="form-control"
                                                 placeholder="Ingresa tu dirección de correo electrónico"
-                                                value="{{ old('email') ? old('email') : 'admin@corporateui.com' }}"
+                                                value="{{ old('email') ? old('email') : "" }}"
                                                 aria-label="Correo" aria-describedby="email-addon">
                                         </div>
                                         <label>Contraseña</label>
